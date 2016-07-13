@@ -1,0 +1,48 @@
+{
+  "name": "express-mvc",
+  "version": "1.0.0",
+  "description": "An MVC structure for express application",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "connect-flash": "~0.1.1",
+    "connect-mongo": "^1.2.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "^2.4.1",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.11",
+    "morgan": "~1.6.1",
+    "passport": "^0.2.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemant-Mann/express-mvc.git"
+  },
+  "keywords": [
+    "express",
+    "mvc",
+    "mvc",
+    "framework",
+    "express",
+    "node",
+    "js",
+    "framework",
+    "node",
+    "js",
+    "javascript",
+    "mvc",
+    "framework"
+  ],
+  "author": "Hemant Mann <hemant.mann121@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hemant-Mann/express-mvc/issues"
+  },
+  "homepage": "https://github.com/Hemant-Mann/express-mvc#readme"
+}
