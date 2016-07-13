@@ -20,6 +20,7 @@ var Home = (function () {
     
     // Dont forget to call next or else request will never be complete
     h.index = function (req, res, next) {
+        this.seo.title = 'Index function';
         next();   // pass control to the calling function
     };
 
@@ -32,6 +33,10 @@ var Home = (function () {
             arr: [12, 334, 334]
         };
         next();
+    };
+
+    h.contact = function (req, res, next) {
+        res.send('Contact function');   // If you dont want rendering of view just directly send response
     };
 
     return h;

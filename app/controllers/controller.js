@@ -64,10 +64,6 @@ var Controller = (function () {
                 }
             });
         },
-        _noview: function () {
-            this.willRenderLayoutView = false;
-            this.willRenderActionView = false;
-        },
         _jsonView: function () {
             this.defaultExtension = "json";
         },
@@ -87,12 +83,9 @@ var Controller = (function () {
                 } else if (this.willRenderActionView) {
                     res.render(action, view);
                 } else {
-                    return false;
+                    return next(Error("Internal Server Error"));
                 }
             } else if (self.defaultExtension == "json") {
-                if (!self.willRenderActionView || !self.willRenderLayoutView) {
-                    return false;
-                }
                 res.json(self.view);
             } else {
                 var err = new Error("Invalid URL");
@@ -135,6 +128,7 @@ var Controller = (function () {
             this.willRenderLayoutView = true;
             this.willRenderActionView = true;
             this.defaultLayout= 'layouts/standard';
+            this.seo = seo;
         }
     };
 
