@@ -83,7 +83,7 @@ module.exports = Auth;
 #### Views
 - Views can be divided in two parts - layoutView (***"layouts/standard.ejs"*** [Default]) + actionView
 - Layout: will include the actionView
-- Create "auth" folder in views directory
+- Create "auth" (controller name lower case) folder in views directory
 - Create a template for login function => ***"auth/login.ejs"*** (actionView)
 ```html
 <p><%= message %></p>
@@ -103,11 +103,17 @@ router.get(urlRegex, function (req, res, next) {
 });
 
 module.exports = router;
-
 ```
+
 - Mouting the routes in "app.js"
 - Add these lines below the homeRoutes
 ```js
 var authRoutes = require('./app/routes/auth');
 app.use('/auth', authRoutes);
+```
+
+Go ahead and visit the new URL
+```bash
+curl -vi http://localhost:3000/auth/login.html # Render View
+curl -vi http://localhost:3000/auth/login.json # Acts as an API
 ```

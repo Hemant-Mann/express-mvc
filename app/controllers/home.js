@@ -20,13 +20,14 @@ var Home = (function () {
     
     // Dont forget to call next or else request will never be complete
     h.index = function (req, res, next) {
-        this.seo.title = 'Index function';
+        this.seo.title = 'Index function';  // Set the title of the page
         next();   // pass control to the calling function
     };
 
     h.jsonView = function (req, res, next) {
         this._jsonView();   // sends the json encoded data set to view in this method
         // and anything else which is common to all the views
+        // will not render any view
 
         this.view.user = {
             prop: "Some property",

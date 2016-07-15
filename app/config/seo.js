@@ -1,3 +1,4 @@
+// SEO object will be available in views
 var seo = {
     title: 'Express MVC',
     description: 'An MVC structure for express application',
